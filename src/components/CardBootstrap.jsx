@@ -1,6 +1,9 @@
 import React from 'react'
 
 export default function CardBootstrap(props) {
+  const handleClick = () =>{
+    alert(`Order Placed, Thanks for Purchasing "${props.title.toUpperCase()}"`);
+  }
   return (
     <>
       <div className="card container leftright" style={{ width: "15rem", height: '20rem' }}>
@@ -8,7 +11,7 @@ export default function CardBootstrap(props) {
         <div className="card-body">
           <h5 className="card-title">{props.title}</h5>
           <p className="card-text">{props.content}</p>
-          <a href="/" className="btn btn-primary">{props.btn}</a>
+          <button type='button' className="btn btn-primary" onClick={() => handleClick()}>Buy Now</button>
         </div>
       </div>
     </>
